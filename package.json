@@ -4,7 +4,13 @@
   "description": "\"Nossa biblioteca do curso de JS com TDD na prática.\"",
   "main": "index.js",
   "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
@@ -24,6 +30,7 @@
   "devDependencies": {
     "eslint": "^7.3.1",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.21.2"
+    "eslint-plugin-import": "^2.21.2",
+    "husky": "^4.2.5"
   }
 }
