@@ -5,13 +5,17 @@ describe('Main', () => {
     // the context of the test
     context('Case 1', () => {
       // the test itself
-      it('should happen blabla', () => {
-
+      it.skip('should happen blabla', () => {
+        throw new Error('just and error');
       });
     });
 
     context('Case 2', () => {
+      it.only('should happen lolol', () => {
+      });
 
+      it('should happen mimimi', () => {
+      });
     });
   });
 
