@@ -1,49 +1,37 @@
 // describes a main block of tests
 describe('Main', () => {
+  let arr;
+
   // runs once before the block
   before(() => {
-    console.log('before');
+    // ex: connect to databse
   });
 
   // runs once after the block
   after(() => {
-    console.log('after');
+    // ex: disconnect to databse
   });
 
   // runs before each test
   beforeEach(() => {
-    console.log('beforeEach');
+    arr = [1, 2, 3];
   });
 
   // runs after each test
   afterEach(() => {
-    console.log('afterEach');
   });
 
-  // you can have multiple describes ex: one for each method
-  describe('Method A', () => {
-    // the context of the test
-    context('Case 1', () => {
-      // the test itself
-      it('should happen blabla', () => {
-      });
-    });
-
-    context('Case 2', () => {
-      it('should happen lolol', () => {
-      });
-
-      it('should happen mimimi', () => {
-      });
-    });
+  it('should have a size of 4 when push another value to the array', () => {
+    arr.push(4);
+    console.log(arr.length); // 4
   });
 
-  describe('Method B', () => {
-    // the context of the test
-    context('Case 1', () => {
-      // the test itself
-      it('should happen fuuu', () => {
-      });
-    });
+  it('should remove the value 3 when use pop in the array', () => {
+    console.log(arr.pop() === 3);
+  });
+
+  it('should have a size of 2 when pop a value from the array', () => {
+    arr.pop();
+    console.log(arr.length); // 2
   });
 });
