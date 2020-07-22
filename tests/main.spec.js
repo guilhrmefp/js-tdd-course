@@ -32,4 +32,36 @@ describe('Calc', () => {
       expect(calc.div).to.be.a('function');
     });
   });
+
+  describe('Sum', () => {
+    it('should return 4 when `sum(2, 2)`', () => {
+      expect(calc.sum(2, 2)).to.be.equal(4);
+    });
+  });
+
+  describe('Sub', () => {
+    it('should return 4 when `sub(6, 2)`', () => {
+      expect(calc.sub(6, 2)).to.be.equal(4);
+    });
+
+    it('should return -4 when `sub(6, 10)`', () => {
+      expect(calc.sub(6, 10)).to.be.equal(-4);
+    });
+  });
+
+  describe('Multi', () => {
+    it('should return 4 when `multi(2, 2)`', () => {
+      expect(calc.multi(2, 2)).to.be.equal(4);
+    });
+  });
+
+  describe('Div', () => {
+    it('should return 2 when `div(4, 2)`', () => {
+      expect(calc.div(4, 2)).to.be.equal(2);
+    });
+
+    it('should return `Can not divide by zero` when divide by 0', () => {
+      expect(calc.div(4, 0)).to.be.equal('Can not divide by zero');
+    });
+  });
 });
