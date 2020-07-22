@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js"
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --watch"
   },
   "husky": {
     "hooks": {

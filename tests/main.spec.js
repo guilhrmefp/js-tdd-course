@@ -1,3 +1,5 @@
+const { expect } = require('chai');
+
 // describes a main block of tests
 describe('Main', () => {
   let arr;
@@ -23,15 +25,20 @@ describe('Main', () => {
 
   it('should have a size of 4 when push another value to the array', () => {
     arr.push(4);
-    console.log(arr.length); // 4
+    expect(arr).to.lengthOf(4);
   });
 
   it('should remove the value 3 when use pop in the array', () => {
-    console.log(arr.pop() === 3);
+    arr.pop();
+    expect(arr).to.not.include(3);
+  });
+
+  it('should return true pop 3 from the array', () => {
+    expect(arr.pop() === 3).to.be.true;
   });
 
   it('should have a size of 2 when pop a value from the array', () => {
     arr.pop();
-    console.log(arr.length); // 2
+    expect(arr).to.lengthOf(2);
   });
 });
