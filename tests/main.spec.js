@@ -4,45 +4,32 @@ const dirtyChai = require('dirty-chai');
 chai.use(dirtyChai);
 const { expect } = require('chai');
 
-// describes a main block of tests
-describe('Main', () => {
-  let arr;
+const calc = require('../src/main.js');
 
-  // runs once before the block
-  before(() => {
-    // ex: connect to databse
-  });
+describe('Calc', () => {
+  describe('Smoke tests', () => {
+    it('should exist the calc lib', () => {
+      expect(calc).to.exist();
+    });
 
-  // runs once after the block
-  after(() => {
-    // ex: disconnect to databse
-  });
+    it('should exist the method `sum`', () => {
+      expect(calc.sum).to.exist();
+      expect(calc.sum).to.be.a('function');
+    });
 
-  // runs before each test
-  beforeEach(() => {
-    arr = [1, 2, 3];
-  });
+    it('should exist the method `sub`', () => {
+      expect(calc.sub).to.exist();
+      expect(calc.sub).to.be.a('function');
+    });
 
-  // runs after each test
-  afterEach(() => {
-  });
+    it('should exist the method `multi`', () => {
+      expect(calc.multi).to.exist();
+      expect(calc.multi).to.be.a('function');
+    });
 
-  it('should have a size of 4 when push another value to the array', () => {
-    arr.push(4);
-    expect(arr).to.lengthOf(4);
-  });
-
-  it('should remove the value 3 when use pop in the array', () => {
-    arr.pop();
-    expect(arr).to.not.include(3);
-  });
-
-  it('should return true pop 3 from the array', () => {
-    expect(arr.pop() === 3).to.be.true();
-  });
-
-  it('should have a size of 2 when pop a value from the array', () => {
-    arr.pop();
-    expect(arr).to.lengthOf(2);
+    it('should exist the method `div`', () => {
+      expect(calc.div).to.exist();
+      expect(calc.div).to.be.a('function');
+    });
   });
 });
