@@ -1,3 +1,7 @@
+const chai = require('chai');
+const dirtyChai = require('dirty-chai');
+
+chai.use(dirtyChai);
 const { expect } = require('chai');
 
 // describes a main block of tests
@@ -34,7 +38,7 @@ describe('Main', () => {
   });
 
   it('should return true pop 3 from the array', () => {
-    expect(arr.pop() === 3).to.be.true;
+    expect(arr.pop() === 3).to.be.true();
   });
 
   it('should have a size of 2 when pop a value from the array', () => {
