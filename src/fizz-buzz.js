@@ -18,4 +18,8 @@ const FizzBuzz = (num) => {
   return num;
 };
 
+const foo = () => {
+  return 'bla';
+};
+
 export default FizzBuzz;

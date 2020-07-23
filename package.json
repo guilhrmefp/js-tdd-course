@@ -10,12 +10,15 @@
     "test:coverage": "nyc npm test"
   },
   "nyc": {
+    "functions": 80,
+    "line": 80,
+    "check-coverage": true,
     "reporter": ["text", "html"],
     "excludes": ["tests/**"]
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint"
+      "pre-push": "npm run lint && npm run test:coverage"
     }
   },
   "repository": {
