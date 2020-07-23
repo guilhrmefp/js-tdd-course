@@ -5,7 +5,7 @@ import FizzBuzz from '../src/fizz-buzz';
 
 chai.use(dirtyChai);
 
-describe.only('FizzBuzz', () => {
+describe('FizzBuzz', () => {
   it('should return `Fizz` when multiple of 3', () => {
     expect(FizzBuzz(3)).to.be.equal('Fizz');
     expect(FizzBuzz(6)).to.be.equal('Fizz');
