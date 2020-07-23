@@ -60,6 +60,7 @@ Add additional notes about how to deploy this on a live system
 
 * [Chai](https://www.chaijs.com/) - Chai Assertion Library
 * [Mocha](https://mochajs.org/) - simple, flexible, fun
+* [NYC](https://github.com/istanbuljs/nyc) - the Istanbul command line interface
 
 ## Contributing
 
