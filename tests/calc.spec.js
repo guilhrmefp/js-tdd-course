@@ -2,7 +2,7 @@ import chai, { expect } from 'chai';
 import dirtyChai from 'dirty-chai';
 import {
   sum, sub, multi, div,
-} from '../src/main';
+} from '../src/calc';
 
 chai.use(dirtyChai);
 
