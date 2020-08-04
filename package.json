@@ -13,8 +13,13 @@
     "functions": 80,
     "line": 80,
     "check-coverage": true,
-    "reporter": ["text", "html"],
-    "excludes": ["tests/**"]
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "excludes": [
+      "tests/**"
+    ]
   },
   "husky": {
     "hooks": {
@@ -47,6 +52,10 @@
     "eslint-plugin-import": "^2.21.2",
     "husky": "^4.2.5",
     "mocha": "^8.0.1",
-    "nyc": "^15.1.0"
+    "node-fetch": "^2.6.0",
+    "nyc": "^15.1.0",
+    "sinon": "^9.0.2",
+    "sinon-chai": "^3.5.0",
+    "sinon-stub-promise": "^4.0.0"
   }
 }
